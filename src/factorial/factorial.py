@@ -21,10 +21,18 @@ def factorial(num):
         return fact 
 
 
-if len(sys.argv) == 1:
-   num = int(input("Debe ingresar un numero: ")) 
-else:
-    num = int(sys.argv[1])
-    sys.exit()
+##if len(sys.argv) == 1:
+##   num = int(input("Debe ingresar un numero: ")) 
+##else:
+##    num = int(sys.argv[1])
+##    sys.exit()
 
-print("Factorial ",num,"! es ", factorial(num)) 
+
+if len(sys.argv) == 1:
+    desde = int(input("Ingrese el número mínimo del rango: "))
+    hasta = int(input("Ingrese el número máximo del rango: "))
+else:
+    min = int(sys.argv[1])
+
+for num in range(desde, hasta):
+    print("Factorial ",num,"! es ", factorial(num)) 
