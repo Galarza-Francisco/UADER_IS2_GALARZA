@@ -29,10 +29,11 @@ def factorial(num):
 
 
 if len(sys.argv) == 1:
-    desde = int(input("Ingrese el número mínimo del rango: "))
-    hasta = int(input("Ingrese el número máximo del rango: "))
+   max = int(input("Debe ingresar el numero maximo del rango: ")) 
 else:
-    min = int(sys.argv[1])
+    max = int(sys.argv[1])
+   #sys.exit()
 
-for num in range(desde, hasta):
-    print("Factorial ",num,"! es ", factorial(num)) 
+
+for i in range (1,max+1):
+    print("Factorial del nro",i, " es: ", factorial(i))
