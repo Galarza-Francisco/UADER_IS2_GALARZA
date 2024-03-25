@@ -4,6 +4,8 @@
 lower = 1
 upper = 100
 
+##imprime en patalla el resultado
+
 print("Prime numbers between", lower, "and", upper, "are:")
 
 for num in range(lower, upper + 1):
