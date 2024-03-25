@@ -21,6 +21,13 @@ def factorial(num):
         return fact 
 
 
+if len(sys.argv) == 1:
+   min = int(input("Debe ingresar el numero minimo del rango: ")) 
+else:
+    min = int(sys.argv[1])
+    sys.exit()
+    
+
 ##if len(sys.argv) == 1:
 ##   num = int(input("Debe ingresar un numero: ")) 
 ##else:
@@ -28,11 +35,6 @@ def factorial(num):
 ##    sys.exit()
 
 
-if len(sys.argv) == 1:
-   min = int(input("Debe ingresar el numero minimo del rango: ")) 
-else:
-    min = int(sys.argv[1])
-   #sys.exit()
 
 
 for i in range (min,60+1):
