@@ -1,10 +1,10 @@
 {
     "token1": {
         "codigo": "C598-ECF9-F0F7-881A",
-        "saldo": 1000.0
+        "saldo": 0.0
     },
     "token2": {
         "codigo": "C598-ECF9-F0F7-881B",
-        "saldo": 1500.0
+        "saldo": 3500.0
     }
 }
