@@ -1,73 +1,35 @@
-"""import json
-import sys
-
-
-import json
-import sys
-
-class recuperadorToken:
-    def __init__(self, jsonfile):
-        self.jsonfile = jsonfile
-        self.data = self.load_json()
-
-    def load_json(self):
-        try:
-            with open(self.jsonfile, 'r') as myfile:
-                data = myfile.read()
-            return json.loads(data)
-        except FileNotFoundError:
-            print(f"archivo no encontrado: {self.jsonfile}")
-            sys.exit(1)
-        except json.JSONDecodeError:
-            print(f"error al decodificar JSON {self.jsonfile}")
-            sys.exit(1)
-
-    def get_token(self, jsonkey):
-        return self.data.get(jsonkey, "Token no encontrado")
-
-def main():
-    if len(sys.argv) < 3:
-        print("Usando: python getJasonNew.py <jsonfile> <jsonkey>")
-        return
-
-    jsonfile = sys.argv[1]
-    jsonkey = sys.argv[2]
-
-    recuperado = recuperadorToken(jsonfile)
-    token = recuperado.get_token(jsonkey)
-    print("Token: ", token)
-
-if __name__ == "__main__":
-    main()
-    """
 
 import sys
 from original.recuperadorOriginal import recuperadorTokenOriginal
 from singleton.recuperadorSingleton import recuperadorTokenSingleton
-
-
+"""
+Copyright UADERFCyT-IS2©2024 Todos los derechos reservados.
+"""
+VERS ='1.1'
 def main():
-    if len(sys.argv) < 4:
-        print("Usando: python getJasonNew.py <jsonfile> <jsonkey> <implementation>")
-        return
-
+    # Verificar si se proporcionan suficientes argumentos
+    if len(sys.argv) == 2 and sys.argv[1] == "-v":
+        print("Versión:", VERS)
+        sys.exit(0)  # Salir con código 0 (éxito)
+    elif len(sys.argv) != 4:
+        print("Error: elegir una forma de implementacion")
+        sys.exit(1)
+    #obtener los argumentos de la consola
     jsonfile = sys.argv[1]
     jsonkey = sys.argv[2]
     implementation = sys.argv[3]
-
+    if implementation not in ["original", "singleton"]:
+        print("implementacion invalida, elegir singleton u original")
+        sys.exit(1)
+    #seleccionar la implementacion segun el argumento 3 de la consola
     if implementation == "original":
-        retriever = recuperadorTokenOriginal()
+        recuperador = recuperadorTokenOriginal()
     elif implementation == "singleton":
-        retriever = recuperadorTokenSingleton()
-    else:
-        print("Implementación no válida. Utilice 'original' o 'singleton'.")
-        return
-
-    token = retriever.get_token(jsonfile, jsonkey)
+        recuperador = recuperadorTokenSingleton()
+    #obtener el toen con la implementacion que se selecciono en consola
+    token = recuperador.get_token(jsonfile, jsonkey)
+    #imprimir token
     print("Token: ", token)
 
 if __name__ == "__main__":
     main()
-
-
-
