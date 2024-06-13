@@ -4,7 +4,7 @@
 ## Resolucion de Trabajo Practico N°6
 
 ## Punto 2
-### a-descarga de carpeta scr desde clasroom
+### a-descarga de carpeta scr desde campus
 - b ![image](https://github.com/Galarza-Francisco/UADER_IS2_GALARZA/assets/91553669/22825c9d-c342-46c0-b4d8-29bf26668c8b)
 
     1° ejecuto el codigo segun la documentacion con el archivo getJason-2.7 
