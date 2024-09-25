@@ -4,7 +4,11 @@
 ## Resolucion de Trabajo Practico N°6
 
 ## Punto 2
+<<<<<<< HEAD
 ### a-descarga de carpeta scr desde clasroom
+=======
+### a-descarga de carpeta scr desde campus
+>>>>>>> 3070e603fa4354c9b5dc12cf376ca862c43bf89a
 - b ![image](https://github.com/Galarza-Francisco/UADER_IS2_GALARZA/assets/91553669/22825c9d-c342-46c0-b4d8-29bf26668c8b)
 
     1° ejecuto el codigo segun la documentacion con el archivo getJason-2.7 
@@ -53,10 +57,22 @@
 ## Docentes de Cátedra
 
 Este curso esta a cargo del Profesor:
+<<<<<<< HEAD
 s
 - Dr. Pedro E. Colla
 
 ## Herramientas usadas
 
+=======
+- Dr. Pedro E. Colla
+
+## Herramientas usadas
+uncompyle6
+pylint
+python3.6
+python2.7
+python3.10
+python3.11
+>>>>>>> 3070e603fa4354c9b5dc12cf376ca862c43bf89a
 Este archivo esta construido en base a [GitHub Docs](https://docs.github.com/).
 
